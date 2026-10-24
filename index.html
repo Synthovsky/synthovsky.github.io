@@ -41,21 +41,31 @@
             margin-bottom: 10px;
             letter-spacing: 1px;
             
-            /* Создаем градиент: текст (белый) -> блик (неоновый) -> текст (белый) */
+            /* Основной цвет букв — серебристый, а по центру — узкий неоновый блик */
             background: linear-gradient(
                 to right, 
-                #ffffff 20%, 
-                var(--accent-color) 40%, 
-                var(--accent-color) 60%, 
-                #ffffff 80%
+                #e2e8f0 30%, 
+                var(--accent-color) 50%, 
+                #e2e8f0 70%
             );
-            background-size: 200% auto; /* Растягиваем градиент для движения */
+            background-size: 200% auto;
+            background-position: -100% center; /* Стартуем слева за пределами текста */
             
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             
-            /* Подключаем анимацию: длительность 3 секунды, бесконечно, плавно */
-            animation: shine 3s linear infinite;
+            /* Анимация на 4 секунды для более плавного и дорогого эффекта */
+            animation: shine 4s linear infinite;
+        }
+
+        /* Четкое движение слева направо */
+        @keyframes shine {
+            0% {
+                background-position: -100% center;
+            }
+            100% {
+                background-position: 100% center;
+            }
         }
 
         /* Описываем само движение блика слева направо */
