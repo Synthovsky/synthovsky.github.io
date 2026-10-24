@@ -123,26 +123,67 @@
         .social-icon:hover {
             color: var(--accent-color);
         }
+
+        .logo {
+            background-image: url('https://avatars.githubusercontent.com/u/59468838?v=4&size=150');
+            background-repeat: no-repeat;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+        }  
     </style>
+
+    <script>
+        function rotate (event) 
+        {
+            var x = event.clientX;
+            var y = event.clientY;
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            var midpoint_x = w / 2;
+            var midpoint_y = h / 2;
+            var pos_x = x - midpoint_x;
+            var pos_y = y - midpoint_y;
+            var val_x = (pos_x / midpoint_x) * 20;
+            var val_y = (pos_y / midpoint_y) * 20;
+            var logo = document.getElementById ("logo");
+            logo.style.transform = `perspective(200px) rotateX(${-val_y}deg) rotateY(${val_x}deg)`;
+        }
+
+        document.addEventListener("mousemove", function(event)
+        {
+            rotate(event)
+        }, false);
+        
+    </script>
+    
 </head>
 <body>
 
     <div class="container">
+        <div class="logo" id="logo">
+            &nbsp;
+        </div>
+        
         <!-- Заголовок и подзаголовок проекта -->
         <div class="profile-title">SYNTHOVSKY</div>
-        <div class="profile-subtitle">Independent Music Project</div>
+        <div class="profile-subtitle">Independent Music Producer</div>
 
         <!-- Основные крупные кнопки -->
         <div class="links-container">
             <!-- Сюда вставляйте ссылку на ваш YouTube (сейчас стоит просто переход на сайт ютуба) -->
+            <!--
             <a href="https://www.youtube.com/@Synthovsky" target="_blank" class="link-card">
                 <i class="fab fa-youtube"></i> Свежие треки на YouTube
             </a>
-            
+            -->
             <!-- Дополнительная кнопка (например, для будущих релизов или других материалов) -->
+            <!--
             <a href="https://www.instagram.com/synthovsky/" target="_blank" class="link-card">
                 <i class="fas fa-music"></i> Слушать новый сингл
             </a>
+            -->
         </div>
 
         <!-- Нижние круглые иконки для соцсетей (Надежные SVG-версии) -->
