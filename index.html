@@ -40,11 +40,30 @@
             font-weight: 800;
             margin-bottom: 10px;
             letter-spacing: 1px;
-            background: linear-gradient(45deg, var(--text-color), var(--accent-color));
+            
+            /* Создаем градиент: текст (белый) -> блик (неоновый) -> текст (белый) */
+            background: linear-gradient(
+                to right, 
+                #ffffff 20%, 
+                var(--accent-color) 40%, 
+                var(--accent-color) 60%, 
+                #ffffff 80%
+            );
+            background-size: 200% auto; /* Растягиваем градиент для движения */
+            
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            
+            /* Подключаем анимацию: длительность 3 секунды, бесконечно, плавно */
+            animation: shine 3s linear infinite;
         }
 
+        /* Описываем само движение блика слева направо */
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
         .profile-subtitle {
             font-size: 1rem;
             color: #8f9cae;
