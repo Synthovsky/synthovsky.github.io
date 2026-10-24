@@ -41,20 +41,20 @@
             margin-bottom: 10px;
             letter-spacing: 1px;
             
-            /* Буквы всегда остаются стальными (#64748b), а узкий блик (var(--accent-color)) занимает всего 4% ширины */
+            /* Буквы всегда горят крутым неоном, а узкий бегущий лучик (48%-52%) — чисто белый */
             background: linear-gradient(
                 to right, 
-                #64748b 48%, 
-                var(--accent-color) 50%, 
-                #64748b 52%
+                var(--accent-color) 46%, 
+                #ffffff 50%, 
+                var(--accent-color) 54%
             );
             background-size: 150% auto;
-            background-position: 150% center; /* Начальная точка: блик спрятан слева перед буквой S */
+            background-position: 150% center;
             
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             
-            /* Время анимации: 3.5 секунды. Эффект плавного скольжения */
+            /* Скорость луча — 3.5 секунды. Можно поставить 3s, если хочется побыстрее */
             animation: shine 3.5s linear infinite;
         }
 
