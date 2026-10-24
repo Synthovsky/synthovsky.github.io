@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthovsky | Official Website</title>
+    <!-- Подключаем красивые иконки соцсетей -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --bg-color: #0d0e15;
+            --card-bg: #161923;
+            --text-color: #ffffff;
+            --accent-color: #00f2fe; /* Неоновый голубой */
+            --accent-hover: #4facfe;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .profile-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, var(--text-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .profile-subtitle {
+            font-size: 1rem;
+            color: #8f9cae;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 35px;
+        }
+
+        .link-card {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 18px 20px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.15);
+        }
+
+        .link-card i {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .social-icon {
+            color: #8f9cae;
+            font-size: 1.6rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Заголовок и подзаголовок проекта -->
+        <div class="profile-title">SYNTHOVSKY</div>
+        <div class="profile-subtitle">Independent Music Project</div>
+
+        <!-- Основные крупные кнопки -->
+        <div class="links-container">
+            <!-- Сюда вставляйте ссылку на ваш YouTube (сейчас стоит просто переход на сайт ютуба) -->
+            <a href="https://www.youtube.com/@Synthovsky" target="_blank" class="link-card">
+                <i class="fab fa-youtube"></i> Свежие треки на YouTube
+            </a>
+            
+            <!-- Дополнительная кнопка (например, для будущих релизов или других материалов) -->
+            <a href="https://www.instagram.com/synthovsky/" target="_blank" class="link-card">
+                <i class="fas fa-music"></i> Слушать новый сингл
+            </a>
+        </div>
+
+        <!-- Нижние круглые иконки для соцсетей -->
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@Synthovsky" target="_blank" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/synthovsky/" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>
