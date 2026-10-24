@@ -41,39 +41,33 @@
             margin-bottom: 10px;
             letter-spacing: 1px;
             
-            /* Основной цвет букв — серебристый, а по центру — узкий неоновый блик */
+            /* Буквы всегда остаются стальными (#64748b), а узкий блик (var(--accent-color)) занимает всего 4% ширины */
             background: linear-gradient(
                 to right, 
-                #e2e8f0 30%, 
+                #64748b 48%, 
                 var(--accent-color) 50%, 
-                #e2e8f0 70%
+                #64748b 52%
             );
-            background-size: 200% auto;
-            background-position: -100% center; /* Стартуем слева за пределами текста */
+            background-size: 150% auto;
+            background-position: 150% center; /* Начальная точка: блик спрятан слева перед буквой S */
             
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             
-            /* Анимация на 4 секунды для более плавного и дорогого эффекта */
-            animation: shine 4s linear infinite;
+            /* Время анимации: 3.5 секунды. Эффект плавного скольжения */
+            animation: shine 3.5s linear infinite;
         }
 
-        /* Четкое движение слева направо */
+        /* Точное циклическое движение слева направо: от буквы S к букве y */
         @keyframes shine {
             0% {
-                background-position: -100% center;
+                background-position: 150% center; /* Блик перед буквой S */
             }
             100% {
-                background-position: 100% center;
+                background-position: -50% center; /* Блик ушел вправо за букву y */
             }
         }
 
-        /* Описываем само движение блика слева направо */
-        @keyframes shine {
-            to {
-                background-position: 200% center;
-            }
-        }
         .profile-subtitle {
             font-size: 1rem;
             color: #8f9cae;
